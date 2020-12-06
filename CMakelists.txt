@@ -8,7 +8,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/lib)
 
 set(CMAKE_EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build/bin)
 
-add_library(slice SHARED
+add_library(slice STATC
     ${PROJECT_SOURCE_DIR}/src/slice.c)
 
 add_executable(slice_test 
