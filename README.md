@@ -12,7 +12,7 @@ Dependency:
 cd into project directory and run:
 
 ```sh
-cd build
+mkdir build && cd build
 cmake ..
 cmake --build .
 ```
