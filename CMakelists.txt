@@ -4,11 +4,7 @@ project(slice VERSION 0.0.1)
 
 set(CMAKE_CXX_STANDARD 18)
 
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/lib)
-
-set(CMAKE_EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build/bin)
-
-add_library(slice STATC
+add_library(slice STATIC
     ${PROJECT_SOURCE_DIR}/src/slice.c)
 
 add_executable(slice_test 
