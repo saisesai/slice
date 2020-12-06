@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.0)
+
+project(slice VERSION 0.0.1)
+
+set(CMAKE_CXX_STANDARD 18)
+
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/build/lib)
+
+set(CMAKE_EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build/bin)
+
+add_library(slice SHARED
+    ${PROJECT_SOURCE_DIR}/src/slice.c)
+
+add_executable(slice_test 
+    ${PROJECT_SOURCE_DIR}/test/slice_test.c)
+
+target_include_directories(slice_test PUBLIC ${PROJECT_SOURCE_DIR}/include)
+
+target_link_directories(slice_test PUBLIC ${PROJECT_SOURCE_DIR}/build/lib)
+
+target_link_libraries(slice_test slice)
